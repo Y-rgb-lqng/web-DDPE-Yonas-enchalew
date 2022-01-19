@@ -11,10 +11,10 @@
         <tr ><P>click the images!</P>
             <td>
                 
-                <a href="reservation.html"><img src="images/hotel.jpg" alt="Hotel rooms" title="Reserve a room." width="80px"></a>
+                <a href="reservation.html"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/hotel.jpg" alt="Hotel rooms" title="Reserve a room." width="80" height="60"></a>
             </td>
             <td>
-                <a href="reservation.html#pizzaDelivery"><img src="images/download.png" alt="Pizza delivery" title="Order Pizza." width="80px"></a>
+                <a href="reservation.html#pizzaDelivery"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/download.png" alt="Pizza delivery" title="Order Pizza." width="80" height="60"></a>
             </td>
             <td>
                 Looking for a job?
@@ -26,5 +26,16 @@
         </tr>
     </table>
 
+    <script>
+        function bigImg(x) {
+          x.style.height = "64px";
+          x.style.width = "64px";
+        }
+        
+        function normalImg(x) {
+          x.style.height = "32px";
+          x.style.width = "32px";
+        }
+        </script>
 </body>
 </html>

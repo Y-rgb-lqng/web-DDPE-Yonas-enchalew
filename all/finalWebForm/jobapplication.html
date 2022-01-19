@@ -5,6 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application</title>
+    <style>
+        #status {
+            position: fixed;
+            width: 100%;
+            font: bold 1em sans-serif;
+            color: #FFF;
+            padding: 0.5em;
+          }
+          
+          #log {
+            padding: 2.5em 0.5em 0.5em;
+            font: 1em sans-serif;
+          }
+          
+          .online {
+            background: green;
+          }
+          
+          .offline {
+            background: red;
+          }
+          </style>
 </head>
 <body>
     <center>
@@ -28,7 +50,7 @@
                             <label for="name">Name: </label>
                         </td>
                         <td align="left">
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="name" onfocus="highlightInput(this)" id="name">
                         </td>
                     </tr>
                     <tr>
@@ -36,7 +58,7 @@
                             <label for="nationality">Nationality: </label>
                         </td>
                         <td align="left">
-                            <input type="text" name="nationality" id="nationality" placeholder="ethiopia">
+                            <input type="text" name="nationality" onfocus="highlightInput(this)" id="nationality" placeholder="ethiopia">
                         </td>
                     </tr>
                     <tr>
@@ -44,7 +66,7 @@
                             <label for="birthdate">Birthdate: </label>
                         </td>
                         <td align="left">
-                            <input type="date" name="bod" id="bod" autocomplete="bday">
+                            <input type="date" name="bod" onfocus="highlightInput(this)" id="bod" autocomplete="bday">
                         </td>
                     </tr>
                     <tr>
@@ -52,7 +74,7 @@
                             <label for="address">Address: </label>
                         </td>
                         <td align="left">
-                            <textarea name="address" id="address" cols="35" rows="6"></textarea>
+                            <textarea name="address" onfocus="highlightInput(this)" id="address" cols="35" rows="6"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -60,7 +82,7 @@
                             <label for="telephone">Telephone: </label>
                         </td>
                         <td align="left">
-                            <input type="tel" name="telephone" id="telephone" placeholder="+251911101214">
+                            <input type="tel" name="telephone" onfocus="highlightInput(this)" id="telephone" placeholder="+251911101214">
                         </td>
                     </tr>
                     <tr>
@@ -68,7 +90,7 @@
                             <label for="UserEmail">Email: </label>
                         </td>
                         <td align="left">
-                            <input type="email" name="userEmail" id="userEmail" required="required" placeholder="abc@gmail.com">
+                            <input type="email" name="userEmail" onfocus="highlightInput(this)" id="userEmail" required="required" placeholder="abc@gmail.com">
                         </td>
                     </tr>
                 </table>
@@ -92,7 +114,7 @@
                     <tr>
                         <td align="left"><label for="qual">Qualifications</label></td>
                         <td align="left">
-                            <input type="checkbox" name="qual">Communication <br>
+                            <input type="checkbox" name="qual" >Communication <br>
                             <input type="checkbox" name="qual">Communication <br>
                             <input type="checkbox" name="qual">Communication <br>
                             <input type="checkbox" name="qual">Communication <br>
@@ -110,7 +132,7 @@
                             <label for="years">Number of years(0-10): </label>
                         </td>
                         <td>
-                            <input type="range" name="years" id="years" min="0" max="10" value="0" step="1">
+                            <input type="range" name="years" onfocus="highlightInput(this)" id="years" min="0" max="10" value="0" step="1">
                         </td>
                     </tr>
                 </table>
@@ -128,7 +150,7 @@
                                 <label for="refree1Name">Name: </label>
                             </td>
                             <td align="left">
-                                <input type="text" name="refree1Name" id="name">
+                                <input type="text" name="refree1Name" onfocus="highlightInput(this)" id="name">
                             </td>
                          </tr>
                          <tr>
@@ -136,7 +158,7 @@
                                 <label for="refree1Occupation">Occupation: </label>
                             </td>
                             <td align="left">
-                                <input type="text" name="refree1Occupation" id="name">
+                                <input type="text" name="refree1Occupation" onfocus="highlightInput(this)" id="name">
                             </td>
                          </tr>
                          <tr>
@@ -156,7 +178,7 @@
                                 <label for="address">Address: </label>
                             </td>
                             <td align="left">
-                                <textarea name="address" id="address" cols="30" rows="5"></textarea>
+                                <textarea name="address" onfocus="highlightInput(this)" id="address" cols="30" rows="5"></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -164,7 +186,7 @@
                                 <label for="ref1telephone">Telephone: </label>
                             </td>
                             <td align="left">
-                                <input type="tel" name="ref1telephone" id="ref1telephone">
+                                <input type="tel" name="ref1telephone" onfocus="highlightInput(this)" id="ref1telephone">
                             </td>
                         </tr>
                      </table>
@@ -177,7 +199,7 @@
                                 <label for="refree2Name">Name: </label>
                             </td>
                             <td align="left">
-                                <input type="text" name="refree2Name" id="name">
+                                <input type="text" name="refree2Name" onfocus="highlightInput(this)" id="name">
                             </td>
                          </tr>
                          <tr>
@@ -185,7 +207,7 @@
                                 <label for="refree2Occupation">Occupation: </label>
                             </td>
                             <td align="left">
-                                <input type="text" name="refree2Occupation" id="name">
+                                <input type="text" name="refree2Occupation" onfocus="highlightInput(this)" id="name">
                             </td>
                          </tr>
                          <tr>
@@ -193,7 +215,7 @@
                                 <label for="refree2rel">Relationship: </label>
                             </td>
                             <td align="left">
-                                <input list="rel" name="rel" id="rel">
+                                <input list="rel" name="rel" onfocus="highlightInput(this)" id="rel">
                                 <datalist name="rel" id="rel">
                                     <option value="Employer">Employer</option>
                                     <option value="Mentor">Mentor</option>
@@ -205,7 +227,7 @@
                                 <label for="address">Address: </label>
                             </td>
                             <td align="left">
-                                <textarea name="address" id="address" cols="30" rows="5"></textarea>
+                                <textarea name="address" onfocus="highlightInput(this)" id="address" cols="30" rows="5"></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -213,16 +235,47 @@
                                 <label for="ref2telephone">Telephone: </label>
                             </td>
                             <td align="left">
-                                <input type="tel" name="ref2telephone" id="ref2telephone" placeholder="+251911101214">
+                                <input type="tel" name="ref2telephone" onfocus="highlightInput(this)" id="ref2telephone" placeholder="+251911101214">
                             </td>
                         </tr>
                      </table>
                 </fieldset>
 
             </fieldset>
-            <input type="submit" value="Submit">
-            <input type="reset" value="reset Form">
+            <input type="submit" onclick="myFunction()" value="Submit">
+            <input type="reset" onclick="myFunc()" value="reset Form">
         </form>
     </center>
+    <script>
+
+        function highlightInput(elm){
+
+            elm.style.background = "lightgreen";
+
+        }    
+        function myFunction(){
+        alert("you have registered successfully");
+    }
+    function myFunc(){
+        alert("you have cleared your application");
+    }
+
+window.addEventListener('load', function() {
+        var status = document.getElementById("status");
+        var log = document.getElementById("log");
+      
+        function updateOnlineStatus(event) {
+          var condition = navigator.onLine ? "online" : "offline";
+      
+          status.className = condition;
+          status.innerHTML = condition.toUpperCase();
+      
+          log.insertAdjacentHTML("beforeend", "Event: " + event.type + "; Status: " + condition);
+        }
+      
+        window.addEventListener('online',  updateOnlineStatus);
+        window.addEventListener('offline', updateOnlineStatus);
+      });
+    </script>
 </body>
 </html>

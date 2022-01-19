@@ -68,8 +68,8 @@
             <input type="tel" name="phone" id="phone" placeholder="+251911101214">
         </fieldset><br>
 
-    <input type="submit" value="Submit Reservation">
-    <input type="reset" value="Clear">
+    <input type="submit" onclick="myFunc()" value="Submit Reservation">
+    <input type="reset" onclick="myFunction()" value="Clear">
     </form>
     <h2 id="pizzaDelivery">Pizza Delivery</h2>
     <h3>Online Order Form</h3>
@@ -152,10 +152,29 @@
             </tr>
         </table>
         <label for="preferedTime">Prefered time: </label>
-        <input type="time" name="preferedTime" id="time"><br><br>
+        <input type="time"  name="preferedTime" id="time"><br><br>
         <label for="instruction">Delivery instruction: </label>
         <textarea name="instruction" id="instruction" cols="35" rows="5"></textarea><br>
-        <input type="submit" value="Submit order">
+        <input type="submit" id="myBtn" value="Submit order">
     </form>
+    <script>
+        var x = document.getElementById("myBtn");
+        x.addEventListener("click", myFunction);
+        x.addEventListener("click", someOtherFunction);
+        
+        function myFunction() {
+          alert ("pizza is on the way!");
+        }
+        
+        function someOtherFunction() {
+          alert ("thank you for choosing us!");
+        }
+        function myFunction(){
+        alert("you have cleared your Reservation");
+    }
+    function myFunc(){
+        alert("you get Reservation");
+    }
+        </script>
 </body>
 </html>
