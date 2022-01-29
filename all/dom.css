@@ -1,0 +1,12 @@
+#page{
+    width: 400px;
+    margin: 20px auto 20px auto;
+    border: 10px solid aquamarine;
+}
+h1,h2,ul{
+    padding: auto;
+    color: black;
+}
+h1,h2{
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+#page{
+    width: 400px;
+    border: 30px solid aqua;
+    font-family: Arial;
+    margin: 20px auto 20px auto;
+}
+
+h1, h2,ul{
+    padding: auto;
+    color: green;
+}
+
+#change,add,remove{
+    margin-left: 10px ;
+    margin-bottom: 10px;
+}
+
+#add{
+    margin-left: 20px;
+}
+
+#remove{
+    margin-left: 20px;
+}
