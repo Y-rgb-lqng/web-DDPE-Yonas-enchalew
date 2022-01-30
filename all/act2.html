@@ -120,14 +120,17 @@ Third   1GB Mobile Data
                 <tr> 
 		     <td width="70"></td>
 		     <td><hr noshade/>
+			<div id="audio">
 			<h2>New Podcast</h2>
 			<h1>Jack Ma - How I Overcame Failure</h1>
 			
-			<audio id="aud" src="C:\Users\Student\Desktop\New folder\lab2\resources\audio\Jack Ma - How I Overcame Failure.mp3" controls></audio>
+			<audio id="aud" src="C:\Users\Student\Desktop\New folder\lab2\resources\audio\Jack Ma - How I Overcame Failure.mp3" controls></audio></div>
 			<hr noshade/>
+			<div id="temp"></div>
+			<div id="video">
 			<h2>pick of the week</h2>
 			<h1>24 Hours a Day</h1>
-			<video id="vid" src="C:\Users\Student\Desktop\New folder\lab2\resources\video\24_HOURS.mp4" controls width="700"></video>
+			<video id="vid" src="C:\Users\Student\Desktop\New folder\lab2\resources\video\24_HOURS.mp4" controls width="700"></video></div>
 			</td>
 		     <td></td>
 		     <td width="70"></td>
@@ -146,7 +149,12 @@ Third   1GB Mobile Data
 	</table>
 	<script>
 		function swap(){
+			var aud = document.getElementById("audio");
+			var vid = document.getElementById("video");
+			var temp = document.getElementById("temp");
 			
+			aud.parentNode.replaceWith(vid, aud);
+			temp.parentNode.replaceWith(temp, aud);
 		}
 
 

@@ -23,18 +23,22 @@
 <button onclick="removeDOM()">remove element</button>
 
     </div> --> 
-    <script>
-    const swap = function (nodeA, nodeB) {
-        const parentA = nodeA.parentNode;
-        const siblingA = nodeA.nextSibling === nodeB ? nodeA : nodeA.nextSibling;
+ 
+<div id="myList">
+    <img src="resources\images\logo_gold.png">
+</div>
+   <div>
+       <video src="resources\video\24_HOURS.mp4" width="200px"></video>
+   </div>
     
-        // Move `nodeA` to before the `nodeB`
-        nodeB.parentNode.insertBefore(nodeA, nodeB);
-    
-        // Move `nodeB` to before the sibling of `nodeA`
-        parentA.insertBefore(nodeB, siblingA);
-    };
-      
-   </script>
+
+<button onclick="myFunction()">Try it</button>
+<script>
+function myFunction() {
+  var cre = document.createNodeType("div");
+  var item = document.getElementById("myList");
+  item.replaceChild(newNode, item);
+}
+</script>
 </body>
 </html>
